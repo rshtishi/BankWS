@@ -1,0 +1,33 @@
+package com.github.rshtishi.bankws.service;
+
+import java.util.List;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.github.rshtishi.bankws.entity.Transaction;
+import com.github.rshtishi.bankws.repository.TransactionRepository;
+
+@WebService(serviceName = "bank-account", endpointInterface = "com.github.rshtishi.bankws.service.BankAccountService")
+public class BankAccountServiceImpl implements BankAccountService {
+	
+	@Autowired
+	private TransactionRepository transactionRepository;
+	
+	@WebMethod(operationName="getTransactions")
+	@Override
+	public List<Transaction> getTrasactions() {
+		List<Transaction> transactions = transactionRepository.findAll();
+		return transactions;
+	}
+
+	@WebMethod(operationName="getTransactionsForClient")
+	@Override
+	public List<Transaction> getTrasactionsForClient(String client) {
+		List<Transaction> transactions = transactionRepository.findByClient(client);
+		return transactions;
+	}
+
+}
