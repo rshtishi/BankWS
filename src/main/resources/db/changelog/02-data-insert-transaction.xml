@@ -4,12 +4,40 @@
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 	<changeSet id="02" author="rshtishi">
-		<insert tableName="transaction">
+		<insert tableName="bank_transaction">
 			<column name="id" valueNumeric="1" />
 			<column name="client" value="rshtishi" />
-			<column name="date" valueDate="${now}" />
-			<column name="amount" valueDate="500.00" />
-			<column name="amount" valueDate="Deposit" />
+			<column name="date" valueDate="2007-08-09T13:14:15" />
+			<column name="amount" value="500.00" />
+			<column name="account_type" value="Deposit" />
+		</insert>
+		<insert tableName="bank_transaction">
+			<column name="id" valueNumeric="2" />
+			<column name="client" value="rshtishi" />
+			<column name="date" valueDate="2007-08-09T13:14:15" />
+			<column name="amount" value="900.00" />
+			<column name="account_type" value="Deposit" />
+		</insert>
+		<insert tableName="bank_transaction">
+			<column name="id" valueNumeric="3" />
+			<column name="client" value="rshtishi" />
+			<column name="date" valueDate="2007-08-09T13:14:15" />
+			<column name="amount" value="200.00" />
+			<column name="account_type" value="Withdraw" />
+		</insert>
+		<insert tableName="bank_transaction">
+			<column name="id" valueNumeric="4" />
+			<column name="client" value="kbalaj" />
+			<column name="date" valueDate="2007-08-09T13:14:15" />
+			<column name="amount" value="700.00" />
+			<column name="account_type" value="Deposit" />
+		</insert>
+		<insert tableName="bank_transaction">
+			<column name="id" valueNumeric="5" />
+			<column name="client" value="vtafaj" />
+			<column name="date" valueDate="2007-08-09T13:14:15" />
+			<column name="amount" value="700.00" />
+			<column name="account_type" value="Deposit" />
 		</insert>
 	</changeSet>
 </databaseChangeLog>

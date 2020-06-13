@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 public class SoapConfiguration {
 	
 	@Bean
-	public SoapPublisher soapPublisher() {
-		return new SoapPublisher();
+	public SoapProperties soapProperties() {
+		return new SoapProperties();
 	}
 
 }
