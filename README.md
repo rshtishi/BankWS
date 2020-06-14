@@ -109,5 +109,5 @@ soap.endpoint.name=baws
  - Clone the repository in your computer by executing: ```git clone https://github.com/rshtishi/BankWS.git```
  - build the project by executing:  ```mvn clean install```
  - run the application by executing:  ```mvn spring-boot:run```
- - Access the wsdl in url: http://localhost:8888/baws?wsdl
+ - Access the wsdl in url: ```http://localhost:8888/baws?wsdl``` to check if application started correctly.
 
