@@ -20,7 +20,7 @@
 			<column name="amount" type="double">
 				<constraints nullable="false" />
 			</column>
-			<column name="account_type" type="action_type">
+			<column name="action_type" type="action_type">
 				<constraints nullable="false" />
 			</column>
 		</createTable>

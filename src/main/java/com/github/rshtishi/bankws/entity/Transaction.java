@@ -28,7 +28,7 @@ public class Transaction {
 	private String client;
 	private LocalDateTime date;
 	private double amount;
-	@Column(name="account_type")
-	private ActionType accountType;
+	@Column(name="action_type")
+	private ActionType actionType;
 
 }
